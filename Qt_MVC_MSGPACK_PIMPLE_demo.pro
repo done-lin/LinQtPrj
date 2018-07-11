@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui testlib
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -28,6 +28,14 @@ SOURCES += main.cpp\
     qtmvcwindowprivate.cpp
 
 HEADERS  += qtmvcwindow.h \
-    qtmvcwindowprivate.h
+    qtmvcwindowprivate.h \
+    qmsgpack-master/src/endianhelper.h \
+    qmsgpack-master/src/msgpack.h \
+    qmsgpack-master/src/msgpack_export.h \
+    qmsgpack-master/src/msgpackcommon.h \
+    qmsgpack-master/src/msgpackstream.h
 
 FORMS    += qtmvcwindow.ui
+
+INCLUDEPATH += qmsgpack-master/src/
+LIBS += -LD:\testing_projects\QtProjects\Qt_MVC_MSGPACK_PIMPLE_demo\qmsgpack-master\bin -lqmsgpackd
