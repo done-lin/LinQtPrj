@@ -45,5 +45,5 @@ LIBS += -L$$PWD/qmsgpack_libs_for_android -lqmsgpackd
 }
 
 win32{
-LIBS += -LD:\testing_projects\QtProjects\Qt_MVC_MSGPACK_PIMPLE_demo\qmsgpack-master\bin -lqmsgpackd
+LIBS += -L$$PWD\qmsgpack-master\bin -lqmsgpackd
 }
