@@ -38,4 +38,12 @@ HEADERS  += qtmvcwindow.h \
 FORMS    += qtmvcwindow.ui
 
 INCLUDEPATH += qmsgpack-master/src/
+
+unix {
+LIBS += -L$$PWD/qmsgpack_libs_for_linux_x64_desktop -lqmsgpackd
+LIBS += -L$$PWD/qmsgpack_libs_for_android -lqmsgpackd
+}
+
+win32{
 LIBS += -LD:\testing_projects\QtProjects\Qt_MVC_MSGPACK_PIMPLE_demo\qmsgpack-master\bin -lqmsgpackd
+}
