@@ -8,7 +8,7 @@ DEFINES += MSGPACK_MAKE_LIB
 DESTDIR = $$PWD/../bin
 QMAKE_CXXFLAGS += -fPIC
 
-CONFIG   += debug_and_release staticlib
+CONFIG   += debug_and_release  staticlib
 CONFIG(debug, debug|release) {
      TARGET = $$join(TARGET,,,d)
 }
@@ -54,6 +54,7 @@ qtHaveModule(location) {
 }
 
 unix {
+    LIBS += /home/xrz/Qt5.6.1/5.6/android_armv7/lib
     header_files.files = $$HEADERS_INSTALL
     header_files.path = /usr/include/qmsgpack
     stream_header_files.files = $$STREAM_HEADERS_INSTALL

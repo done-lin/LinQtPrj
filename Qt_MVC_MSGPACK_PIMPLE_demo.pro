@@ -3,6 +3,10 @@
 # Project created by QtCreator 2018-07-11T10:51:35
 #
 #-------------------------------------------------
+# this project is use by done lin, it is tested on linux Ubuntu x64, and Android(compile by Qt5.6.1)
+# alread recompiled the qmsgpack library, the libaray url: https://github.com/done-lin/QmsgPackForLinuxAndAndroid
+#
+# this project's github url: https://github.com/done-lin/LinQtPrj
 
 QT       += core gui testlib
 
