@@ -8,7 +8,7 @@ DEFINES += MSGPACK_MAKE_LIB
 DESTDIR = $$PWD/../bin
 QMAKE_CXXFLAGS += -fPIC
 
-CONFIG   += debug_and_release
+CONFIG   += debug_and_release staticlib
 CONFIG(debug, debug|release) {
      TARGET = $$join(TARGET,,,d)
 }
