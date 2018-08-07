@@ -25,7 +25,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         qtmvcwindow.cpp \
-    qtmvcwindowprivate.cpp
+    qtmvcwindowprivate.cpp \
+    qmsgpack-master/src/private/pack_p.cpp \
+    qmsgpack-master/src/private/qt_types_p.cpp \
+    qmsgpack-master/src/private/unpack_p.cpp \
+    qmsgpack-master/src/stream/geometry.cpp \
+    qmsgpack-master/src/stream/location.cpp \
+    qmsgpack-master/src/stream/time.cpp
 
 HEADERS  += qtmvcwindow.h \
     qtmvcwindowprivate.h \
@@ -33,15 +39,21 @@ HEADERS  += qtmvcwindow.h \
     qmsgpack-master/src/msgpack.h \
     qmsgpack-master/src/msgpack_export.h \
     qmsgpack-master/src/msgpackcommon.h \
-    qmsgpack-master/src/msgpackstream.h
+    qmsgpack-master/src/msgpackstream.h \
+    qmsgpack-master/src/private/pack_p.h \
+    qmsgpack-master/src/private/qt_types_p.h \
+    qmsgpack-master/src/private/unpack_p.h \
+    qmsgpack-master/src/stream/geometry.h \
+    qmsgpack-master/src/stream/location.h \
+    qmsgpack-master/src/stream/time.h
 
 FORMS    += qtmvcwindow.ui
 
-INCLUDEPATH += qmsgpack-master/src/
+INCLUDEPATH += qmsgpack-master/src/ -I$$PWD/qmsgpack-master/src -I.
 
 unix {
-LIBS += -L$$PWD/qmsgpack_libs_for_linux_x64_desktop -lqmsgpackd
-LIBS += -L$$PWD/qmsgpack_libs_for_android -lqmsgpackd
+LIBS += -L$$PWD/qmsgpack_libs_for_linux_x64_desktop/ -lqmsgpackd
+LIBS += -L$$PWD/qmsgpack_libs_for_android/ -lqmsgpackd
 }
 
 win32{
